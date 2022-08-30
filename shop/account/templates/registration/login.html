@@ -1,0 +1,58 @@
+{% extends 'registration/base.html' %}
+{% block title %}Вход{% endblock %}
+
+{% block form %}
+<div xmlns="http://www.w3.org/1999/html">
+    {% if user.is_anonymous %}
+
+
+<form class="form-signin" method="post" action="{% url 'login' %}">
+
+    {% if form.errors %}
+        <p class="alert-danger">Ваше имя пользователя и пароль не совпадают!!!<br> Пожалуйста, попробуйте еще раз.</p>
+    {% endif %}
+
+    <input type="hidden" name="next" value="{{ next }}">
+    <img class="mb-4" src="/static/logo.svg" alt="" width="72" height="72">
+        {% csrf_token %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Вход</h1>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="username"
+         value="" required="" autofocus="" data-cip-id="inputEmail">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль"
+         name="password" required="" data-cip-id="inputPassword">
+
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+
+      <style>
+      .button {
+      background-color: #FF4500;
+      border: none;
+      color: white;
+      padding: 20px 34px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/account/register/" class="button">Регистрация</a>
+  </body>
+
+</form>
+    {% else %}
+        <p class="text-success">{{ user|upper }}, Вы уже зарегистрированы. <br> <a href="/">На главную.</a></p>
+    {% endif %}
+       <p>Магазин стоковой одежды  <a href="https://www.instagram.com/lisica_outlet/"><img src=" /static/image/instagram.png" height="32" alt="Istagramm"></a></p> </p>
+        <a href="/">На главную.</a>
+</div>
+
+
+{% endblock %}
