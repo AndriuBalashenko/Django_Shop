@@ -3,7 +3,6 @@ from django.shortcuts import render
 
 from .forms import UserRegistrationForm
 
-
 def register(request):
 
     if request.method == 'POST':
