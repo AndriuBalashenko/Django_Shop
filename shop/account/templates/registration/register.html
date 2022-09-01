@@ -18,12 +18,19 @@
     {% csrf_token %}
 
     <h1 class="h3 mb-3 font-weight-normal">Создать аккаунт</h1>
+
     <label for="inputEmail" class="sr-only">Email</label>
     <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email"
          value="" required="" autofocus="" data-cip-id="inputEmail">
+
+    <label for="inputPhone" class="sr-only">Phone</label>
+    <input type="tel" id="inputEmail" class="form-control" placeholder="+375**1234567" name="phone"
+         value="" required="" autofocus="" data-cip-id="inputPhone">
+
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Пароль"
          name="password" required="" data-cip-id="inputPassword">
+
     <input type="password" id="inputPassword" class="form-control" placeholder="Повторите пароль"
          name="password2" required="" data-cip-id="inputPassword">
 
