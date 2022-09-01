@@ -53,6 +53,11 @@ class Product(models.Model):
         verbose_name='Наименование',
     )
 
+    price = models.CharField(
+        max_length = 5,
+        verbose_name = 'Цена',
+    )
+
     description = models.TextField(verbose_name='Описание')
 
     image = models.ImageField(
