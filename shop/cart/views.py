@@ -40,7 +40,7 @@ def view_cart(request):
 
     if cart:
         products = {}
-        product_list = Product.objects.filter(pk__in=cart.keys()).values('id', 'title', 'description')
+        product_list = Product.objects.filter(pk__in=cart.keys()).values('id', 'title','image' ,'description', 'price')
 
         for product in product_list:
             products[str(product['id'])] = product
@@ -78,5 +78,5 @@ def view_order(request):
 
 
 def cart_remove(request):
-    cart = None
-    return render(request, 'cart.html', cart)
+    del request.session['cart']
+    return render(request, 'cart.html')

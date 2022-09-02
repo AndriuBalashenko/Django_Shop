@@ -7,9 +7,6 @@
     {% include 'menu.html' %}
     <div class="container mt-3">
 
-
-
-
     {% if not cart %}
 
     <div class="col-lg-6 col-md-9 col-sm-12 order-md-2 mb-4 mx-auto" style="padding-top: 25px;">
@@ -33,6 +30,9 @@
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">{{ value.product.title}}</h6>
+                            <h6 class="my-0">{{ value.product.price}} р за товар </h6>
+                            {% load static %}
+                            <img src="{% static '/image/cart.gif' %}" alt="image" width="100">>
                             <small class="text-muted">{{ value.product.description }}</small>
                         </div>
                         <span class="text-muted">{{ value.quantity }}</span>
@@ -46,14 +46,14 @@
 
          <style>
             .button {
-             background-color: yellow;
+             background-color: rgba(255, 235, 0, 0.91);
              border: none;
              color: blue;
-             padding: 8px 15px;
+             padding: 1px 1px;
              text-align: center;
               text-decoration: none;
               display: inline;
-              font-size: 25px;
+              font-size: 20px;
               margin: 2px 1px;
               cursor: pointer;
   }

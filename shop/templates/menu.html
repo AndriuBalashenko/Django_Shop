@@ -2,8 +2,9 @@
 {% load catalog_extras %}
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" xmlns="http://www.w3.org/1999/html">
-  <a class="navbar-brand" href="{% url 'home' %}">Магазин стоковой одежды</a>
-  <img src="{% static 'logo.svg' %}" alt="" width="70" height="70">
+    <img src="{% static 'logo.svg' %}" alt="" width="70" height="70">
+    <a class="navbar-brand" href="{% url 'home' %}">| 𝐋𝐢𝐬𝐢𝐜𝐀 | OUTLET|</a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -13,9 +14,8 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">
-          <h3>Главная</h3>
-      </li>
+          <a class="nav-link" href="{% url 'home' %}"></a>
+        </li>
         {% include 'catalog/catalog_menu.html' %}
     </ul>
 
