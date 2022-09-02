@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from .models import Order, ProductsInOrder
 
-
 class ProductsInOrderInline(admin.TabularInline):
     model = ProductsInOrder
 

@@ -6,7 +6,6 @@ from account.models import User
 from cart.models import Order, ProductsInOrder
 from catalog.models import Product
 
-
 def add_to_cart(request):
     path = request.GET.get('next')
 

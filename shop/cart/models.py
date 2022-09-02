@@ -3,7 +3,6 @@ from django.db import models
 from account.models import User
 from catalog.models import Product
 
-
 class Order(models.Model):
     customer = models.ForeignKey(User, related_name='customer',
                                  on_delete=models.CASCADE, verbose_name='Покупатель')

@@ -2,7 +2,6 @@ from django.db import models
 
 from catalog.models import Product
 
-
 class Article(models.Model):
     name = models.CharField(max_length=128, verbose_name='Заголовок')
     text = models.TextField(verbose_name='Основной текст')
