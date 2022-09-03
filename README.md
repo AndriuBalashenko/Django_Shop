@@ -6,18 +6,23 @@
 ```sh
 pip install -r requirements.txt
 ```
-2. Выполните миграции:
+2. Установка postgresql в среду разработки:
+  * В папке с проектом есть папка backup_database там файл shop_lisa.backup
+  * Открываем pgAdmin 4 
+  * Создаем базу данных с именем shop_lisa
+  * Делаем востановление базы данных 
+
+3. Выполните миграции:
 ```sh
 python manage.py migrate
 ```
-3. Запустите тестовый сервер:
+4. Запустите тестовый сервер:
   ```sh
  python manage.py runserver 7000--settings=settings.local
  ```
-4. Перейдите по ссылке: (http://127.0.0.1:7000)
+5. Перейдите по ссылке: (http://127.0.0.1:7000)
 
 #### Тестовый суперпользователь:
-
 :lock: Логин: and@riu.by 
 :key: Пароль: Admin2022
 
