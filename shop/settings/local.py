@@ -1,6 +1,6 @@
 from shop_fox.settings import *
 
-ALLOWED_HOSTS = ['blooming-earth-46350.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 DEBUG = True
 
