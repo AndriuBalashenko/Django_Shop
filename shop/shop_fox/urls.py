@@ -20,18 +20,20 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic import RedirectView
-from article import views
+#from django.views.generic import RedirectView
+from .views import view_home
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('image/favicon.ico'))),
+    #path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('image/favicon.ico'))),
     path('catalog/', include(('catalog.urls', 'catalog'), namespace='catalog')),
     path('cart/', include('cart.urls')),
     path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
-    path('', views.view_home, name='home'),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', view_home, name='home'),
+    ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
