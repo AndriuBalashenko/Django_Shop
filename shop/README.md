@@ -16,15 +16,19 @@ pip install -r requirements.txt
 ```sh
 python manage.py migrate
 ```
-4. Запустите тестовый сервер:
+4. Создание staticfiles
+ ```sh
+  python manage.py collectstatic
+ ```
+5. Запустите тестовый сервер:
   ```sh
  python manage.py runserver 7000 --settings=settings.local
  ```
-4.1 Запустите релизный сервер:
+5.1 Запустите релизный сервер:
   ```sh
  python manage.py runserver 7000
  ```
-5. Перейдите по ссылке: (http://127.0.0.1:7000)
+6. Перейдите по ссылке: (http://127.0.0.1:7000)
 
 #### Тестовый суперпользователь:
 :lock: Логин: and@riu.by 
