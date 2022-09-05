@@ -1,18 +1,17 @@
 from shop_fox.settings import *
 import os
-
 ALLOWED_HOSTS = ['blooming-earth-46350.herokuapp.com', 'localhost', '127.0.0.1']
 
 DEBUG = True
 
-# INSTALLED_APPS += [
-#     'debug_toolbar',
-# ]
-#
-# MIDDLEWARE += [
-#     'whitenoise.middleware.WhiteNoiseMiddleware',
-#     'debug_toolbar.middleware.DebugToolbarMiddleware',
-# ]
+INSTALLED_APPS += [
+    'debug_toolbar',
+]
+
+MIDDLEWARE += [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
 
 INTERNAL_IPS = [
     '127.0.0.1',

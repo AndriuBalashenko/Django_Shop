@@ -18,7 +18,11 @@ python manage.py migrate
 ```
 4. Запустите тестовый сервер:
   ```sh
- python manage.py runserver 7000--settings=settings.local
+ python manage.py runserver 7000 --settings=settings.local
+ ```
+4.1 Запустите релизный сервер:
+  ```sh
+ python manage.py runserver 7000
  ```
 5. Перейдите по ссылке: (http://127.0.0.1:7000)
 
