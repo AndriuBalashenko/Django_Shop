@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Главная{% endblock %}
 
 {% block content %}
@@ -7,19 +7,20 @@
      <main role="main">
         {% for article in articles %}
             <div>
-                <div class="jumbotron">
-                    <div class="container">
-                        <h2 class="display-4"> {{ article.name }} </h2>
-                        <p> {{ article.text }} </p>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container mt-10">
+                        <h2 class="display"><img src="{% static '/image/new.gif' %}" alt="image" width="50"> {{ article.name }} <img src="{% static '/image/fox-1.gif' %}" alt="image" width="54"></h2>
+                        <h4> <img src="{% static '/image/shoping.gif' %}" alt="image" width="60">{{ article.text }}  <img src="{% static '/image/down.gif' %}" alt="image" width="15"> </h4>
                     </div>
                 </div>
-                <div class="container mb-5">
+                <div class="container mb-3">
                     <div class="row">
                         {% for product in article.products.all %}
                             <div class="col-md-4">
-                                <h5>{{ product.title }}</h5>
+                            <br>
+                                <h5> <img src="{% static '/image/new_m.gif' %}" alt="image" width="35"> {{ product.title }} </h5>
                                 <a href="{{ product.get_absolute_url }}">
-                                    <img src="{{ product.image.url }}" width="200">
+                                    <img src="{{ product.image.url }}" width="300">
                                 </a>
                             </div>
                         {% endfor %}
