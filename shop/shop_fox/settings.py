@@ -25,8 +25,7 @@ SECRET_KEY = 'sx=7law(fuponyu-wz3dy#-%3@%zoph&$*7f+9r#3vk0ot7z-_'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "*", '192.168.1.56']
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
 
 # Application definition
 
@@ -37,12 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'article.apps.ArticleConfig',
     'catalog.apps.CatalogConfig',
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
-    # Древовидное меню
     'mptt',
 
 ]
