@@ -3,7 +3,6 @@ from django.db import models
 #from django.utils.translation import ugettext_lazy as _
 
 
-
 class UserManager(BaseUserManager):
 
     use_in_migrations = True
@@ -34,12 +33,10 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-
-
 class User(AbstractUser):
 
     username = None
-    email = models.EmailField(unique=True)
+    email = models.EmailField( unique=True)
     phone = models.CharField(max_length = 15)
     objects = UserManager()
 

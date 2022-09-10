@@ -1,7 +1,7 @@
 """shop_fox URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
-from django.urls import include, path, re_path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import view_home

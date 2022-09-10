@@ -1,5 +1,5 @@
 from django import forms
-from .models import User
+from account.models import User
 
 
 class UserRegistrationForm(forms.ModelForm):
@@ -8,7 +8,7 @@ class UserRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('email', 'phone','first_name' )
+        fields = ('email', 'phone', 'first_name' )
 
     def clean_password2(self):
         cd = self.cleaned_data
