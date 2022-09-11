@@ -8,12 +8,13 @@
         <div class="row">
         {% for product in page_obj %}
         <div class="col-lg-4">
-            <h4>{{ product.title }}</h4>
-            <h6>Цена: {{ product.price }} BYN </h6>
+        <div class="card" style="width: 18.8rem; margin-bottom:15px;">
+            <h5>&shy; &shy; {{ product.title }}</h5>
+            <h6>&shy; &shy; Цена: {{ product.price }} BYN </h6>
             <a href="{{ product.get_absolute_url}}">
                 <img src="{{ product.image.url }}" width="300" alt="{{ product.slug }}">
             </a>
-            <p><hr></p>
+        </div>
             {% include 'add_to_cart.html' %}
         </div>
     {% endfor %}
