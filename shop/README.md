@@ -4,7 +4,7 @@
 * Ссылка для Windows https://docs.docker.com/desktop/install/windows-install/
 * Ссылка для Mac https://docs.docker.com/docker-for-mac/install/
 * Ссылка для Linux https://www.docker.com/community-edition
-1. Скачиваем файл проектра из GitHub
+1. Скачиваем ZIP-архив проектра из GitHub
 2. Распаковываем архив
 3. Данная команда создает новый образ и запустим два контейнера:
 ```sh
