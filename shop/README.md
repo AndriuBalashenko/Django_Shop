@@ -31,13 +31,13 @@ python manage.py migrate
  ```sh
   python manage.py collectstatic
  ```
-5. Запустите тестовый сервер:
+5. Запустите тестовый сервер c отладчиком:
   ```sh
  python manage.py runserver 7000 --settings=settings.local
  ```
 5.1 Запустите релизный сервер:
   ```sh
- python manage.py runserver 7000
+ python manage.py runserver --settings=settings.prod
  ```
 6. Перейдите по ссылке: (http://127.0.0.1:7000)
 
