@@ -7,10 +7,11 @@
      <main role="main">
         {% for article in articles %}
             <div>
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container mt-10">
-                        <h2 class="display"><img src="{% static '/image/new.gif' %}" alt="image" width="50"> {{ article.name }} <img src="{% static '/image/fox-1.gif' %}" alt="image" width="54"></h2>
-                        <h4> <img src="{% static '/image/shoping.gif' %}" alt="image" width="60">{{ article.text }}  <img src="{% static '/image/down.gif' %}" alt="image" width="15"> </h4>
+                <div class="alert alert-Secondary alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                        <h2 class="display-5"><img src="{% static '/image/fox_b.gif' %}" alt="image" width="100">{{ article.name }} </h2>
+                        <h4>&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;{{ article.text }} &shy; &shy; &shy;  <img src="{% static '/image/down.gif' %}" alt="image" width="15"> </h4>
+                    </div>
                     </div>
                 </div>
                 <div class="container mb-3">

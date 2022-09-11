@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Корзина{% endblock %}
 
@@ -13,7 +14,8 @@
         <p>
 
         </p>
-        <h2 class="text-muted">В корзине пока что нет товаров</h2>
+        <div style="text-align: center;"><h4 class="text-muted">В корзине пока что нет товаров</h4></div>
+
     </div>
 
 {% else %}
@@ -59,7 +61,6 @@
               cursor: pointer;
   }
                 </style>
-                  </head>
                   <body>
                     <a href="/cart/remove/" class="button">Oчистить корзину</a>
                   </body>
@@ -70,7 +71,7 @@
     {% if messages %}
     {% for message in messages %}
     <p></p>
-    <p class="text-success text-center">{{ message }}</p>
+    <h3 class="text-success text-center">✅ {{ message }} <img src="{% static '/image/fox.gif' %}" alt="image" width="85"></h3>
     {% endfor %}
 {% endif %}
 

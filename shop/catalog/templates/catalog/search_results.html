@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="container mt-5">
+        <div class="row">
+        {% for i in post%}
+        <div class="col">
+        <div class="card" style="width: 21.5rem; margin-bottom:15px;">
+          <div class="card-body">
+            <h5 class="card-title">{{i.title}}</h5>
+            <a href="{{ i.get_absolute_url}}">
+                <img src="{{ i.image.url }}" width="300" alt="{{ product.slug }}">
+            </a>
+          </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</section>
+{% endblock %}

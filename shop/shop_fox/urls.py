@@ -25,6 +25,8 @@ from django.views.generic import RedirectView
 from django.views.static import serve
 from django.urls import re_path as url
 
+from catalog.views import SearchResultsView
+
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('image/favicon.ico'))),
     path('catalog/', include(('catalog.urls', 'catalog'), namespace='catalog')),
@@ -32,6 +34,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
     path('', view_home, name='home'),
+    path('search/', SearchResultsView.as_view(), name="search_results",),
 ]
 if settings.DEBUG:
     import debug_toolbar

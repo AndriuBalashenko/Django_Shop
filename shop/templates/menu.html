@@ -1,8 +1,10 @@
 {% load static %}
 {% load catalog_extras %}
 
+
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" xmlns="http://www.w3.org/1999/html">
-    <img src="{% static 'logo.svg' %}" alt="" width="75" height="75">.
+    <img src="{% static 'logo.svg' %}" alt="" width="75" height="75">&shy; &shy; &shy; &shy;
     <a class="navbar-brand" href="{% url 'home' %}">𝐋𝐢𝐬𝐢𝐜𝐀 | OUTLET</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -20,7 +22,11 @@
 
     </ul>
 
-
+    <div class="search_form">
+        <form class="d-flex m-1" action="{% url 'search_results' %}" method="get">
+            <input class="form-control mr-1" type="search" placeholder="Что ищем?..." aria-label="Search" name="q">
+        </form>
+    </div>
 
     {% if user.is_authenticated %}
         <div class="text-success">Пользователь: {{ user.get_username }}</div>
@@ -33,8 +39,5 @@
     {% else %}
         <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="{% url 'login'%}?next={{request.path}}">Войти</a>
     {% endif %}
-
-
-
   </div>
 </nav>

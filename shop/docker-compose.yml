@@ -17,11 +17,11 @@ services:
   db:
     image: postgres:14.5-alpine
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      -   postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=shop_lisa
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=15082014
+      - ./.env
+    ports:
+      - "7006:5432"
 volumes:
   postgres_data:
 

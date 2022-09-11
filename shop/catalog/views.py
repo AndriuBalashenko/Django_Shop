@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
-
+from django.db.models import Q
 from .forms import ReviewForm
 from .models import Product, Category
 
@@ -49,3 +49,14 @@ class ProductDetail(DetailView):
             context['form'] = form
 
         return self.render_to_response(context=context)
+
+class SearchResultsView(ListView):
+    model = Product
+    template_name = 'Catalog/search_results.html'
+    context_object_name = 'post'
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        object_list = Product.objects.filter(Q(title__icontains=query))
+        print(object_list)
+        return object_list

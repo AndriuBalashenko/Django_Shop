@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . /shop/
 
-
+RUN mv -f fix_trans.py /usr/local/lib/python3.10/site-packages/django/utils/translation/__init__.py
 ENTRYPOINT ["/shop/entrypoint.sh"]
