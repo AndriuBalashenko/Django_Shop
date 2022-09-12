@@ -1,5 +1,16 @@
 # Django_Shop
 Дипломный проект Django
+### Запуск через Docker 
+* Ссылка для Windows https://docs.docker.com/desktop/install/windows-install/
+* Ссылка для Mac https://docs.docker.com/docker-for-mac/install/
+* Ссылка для Linux https://www.docker.com/community-edition
+1. Скачиваем ZIP-архив проектра из GitHub
+2. Распаковываем архив
+3. Данная команда создает новый образ и запустим два контейнера:
+```sh
+docker-compose up -d --build
+```
+
 ### Установка в среду разработки:
 
  1. Установите зависимости:
@@ -20,13 +31,13 @@ python manage.py migrate
  ```sh
   python manage.py collectstatic
  ```
-5. Запустите тестовый сервер:
+5. Запустите тестовый сервер c отладчиком:
   ```sh
  python manage.py runserver 7000 --settings=settings.local
  ```
 5.1 Запустите релизный сервер:
   ```sh
- python manage.py runserver 7000
+ python manage.py runserver --settings=settings.prod
  ```
 6. Перейдите по ссылке: (http://127.0.0.1:7000)
 
