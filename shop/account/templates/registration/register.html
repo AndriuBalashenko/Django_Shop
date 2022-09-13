@@ -38,9 +38,17 @@
          name="password2" required="" data-cip-id="inputPassword">
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Создать</button>
+    <br>
+    <a href="/"><img src=" /static/image/home.png" height="50"></a>
+    <br>
+    <br>
+    <h6>Мы в &shy; &shy; <a href="https://www.instagram.com/lisica_outlet/"><img src=" /static/image/instagram.png" height="27" alt="Istagramm"></a> <a href="https://t.me/+D99k2h_NwZ5mYTBi"><img src=" /static/image/tg.png" height="33" alt="Telegramm"></a></h6>
+
 </form>
     {% else %}
     <p class="text-success">{{ user|upper}}, Вы уже зарегистрированы. <br> <a href="{{ '/' }}">Перейти на главную</a></p>
     {% endif %}
 </div>
+
+
 {% endblock %}
