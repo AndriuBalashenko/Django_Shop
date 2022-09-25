@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['.ngrok.io']
+ALLOWED_HOSTS = ['ngrok.io', '*']
 
 # Application definition
 print(ALLOWED_HOSTS)

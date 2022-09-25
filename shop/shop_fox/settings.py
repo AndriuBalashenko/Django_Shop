@@ -163,3 +163,5 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_TRUSTED_ORIGINS = ["https://eu.ngrok.io", "https://6e4b-45-82-33-92.eu.ngrok.io"]
