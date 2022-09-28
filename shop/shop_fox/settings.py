@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
     'mptt',
+    'embed_video',
 
 ]
 
@@ -74,7 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'catalog.context_processors.catalog'
+                'catalog.context_processors.catalog',
             ], 'libraries':{
             'new_tags': 'catalog.new_tags',
 
@@ -163,3 +164,5 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_TRUSTED_ORIGINS = ["https://*.eu.ngrok.io", "https://85f9-37-214-41-137.eu.ngrok.io"]

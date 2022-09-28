@@ -28,10 +28,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['.ngrok.io']
+ALLOWED_HOSTS = ['ngrok.io', '*']
 
 # Application definition
-print(ALLOWED_HOSTS)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
     'mptt',
+    'embed_video',
 
 ]
 
@@ -74,7 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'catalog.context_processors.catalog'
+                'catalog.context_processors.catalog',
             ], 'libraries':{
             'new_tags': 'catalog.new_tags',
 
@@ -163,3 +163,4 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+CSRF_TRUSTED_ORIGINS = ["https://*.eu.ngrok.io", "https://9681-37-214-31-104.eu.ngrok.io"]
