@@ -31,7 +31,6 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = ['ngrok.io', '*']
 
 # Application definition
-print(ALLOWED_HOSTS)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
     'mptt',
+    'embed_video',
 
 ]
 
@@ -74,7 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'catalog.context_processors.catalog'
+                'catalog.context_processors.catalog',
             ], 'libraries':{
             'new_tags': 'catalog.new_tags',
 

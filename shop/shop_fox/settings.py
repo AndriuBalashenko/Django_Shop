@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
     'mptt',
+    'embed_video',
 
 ]
 
@@ -74,7 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'catalog.context_processors.catalog'
+                'catalog.context_processors.catalog',
             ], 'libraries':{
             'new_tags': 'catalog.new_tags',
 
