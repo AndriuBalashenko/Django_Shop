@@ -11,3 +11,4 @@ sqlparse==0.4.2
 tzdata==2022.2
 whitenoise==6.2.0
 python-dotenv==0.21.0
+django-embed-video==1.4.7
