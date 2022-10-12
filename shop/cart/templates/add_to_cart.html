@@ -1,5 +1,5 @@
 {% load static %}
 <form action="{% url 'cart:add_to_cart' %}?product_id={{ product.id }}&next={{ request.path }}" method="post">
     {% csrf_token %}
-    <input type="submit" class="btn btn-secondary" value="Добавить в корзину »" ><img src="{% static '/image/shoping.gif' %}" alt="image" width="65">
+    <p><div style="text-align: -webkit-match-parent;"><input type="submit" class="btn btn-secondary" value="В корзину ✅" ></div></p>
 </form>
